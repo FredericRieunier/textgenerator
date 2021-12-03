@@ -1,9 +1,14 @@
 // Random index generator
+var randomRecords = [];
 function getRandomIntInclusive(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max-min +1)) + min;
+    var randomNumberPicked = Math.floor(Math.random() * (max-min +1)) + min;
+    randomRecords.push(randomNumberPicked);
+    return randomNumberPicked;
 }
+
+
 
 // Load words arrays
 var requestPath = "wordsArrays.json";
@@ -47,32 +52,36 @@ function getWords(t){
     button.addEventListener("click", addSentence);
 
     function addSentence(){
+        // console.log(getRandomIntInclusive(1, 10));
+        console.log(randomRecords);
+        // console.log(Math.random());
         RandomizeIndexAndAddproposition(wordsArrays.sujets);
         RandomizeIndexAndAddproposition(wordsArrays.verbes_transitifs);
         RandomizeIndexAndAddproposition(wordsArrays.cOD);
         phrase += ".";
 
-        console.log(phrase[phrase.length-1]);
+        // console.log(phrase[phrase.length-1]);
         // Display text
-        var paragraphAnimated = document.getElementById("paragraph-animated");
+        // var paragraphAnimated = document.getElementById("paragraph-animated");
 
-        // addALetter();
-        var interval;
-        phrase = "OK";
-        for(let i=0; i<phrase.length; i++){
-            function addALetter(){
-                paragraphAnimated.innerText += phrase[i];
-            }
-            interval = setInterval(addALetter, 2000);
-            console.log(phrase.length);
-        }
+        // // addALetter();
+        // var interval;
+        // phrase = "OK";
+        // for(let i=0; i<phrase.length; i++){
+        //     function addALetter(){
+        //         paragraphAnimated.innerText += phrase[i];
+        //     }
+        //     interval = setInterval(addALetter, 2000);
+        //     console.log(phrase.length);
+        // }
        
 
         paragraph.innerText = phrase;
-        console.log(phrase[1]);
+        // console.log(phrase[1]);
     }
 
     // Faire une animation d'apparition des lettres une par une (donner impression que le texte est tapé).
+    // Bouton pour copier coller 
     // Alterner phrases simples et phrases avec :
     // CC de lieu
     // CC de manière (en mangeant du boudin)
