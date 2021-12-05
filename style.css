@@ -1,7 +1,7 @@
 body{
     background-color: black;
     margin: 0;
-    color: white;
+    /* color: white; */
 }
 
 h1{
@@ -18,11 +18,13 @@ main{
 }
 
 p{
-    
-    width: 600px;
+    background-image: url("https://thumbs.dreamstime.com/z/page-vide-d-un-livre-tr%C3%A8s-vieux-464831.jpg");
+    width: 650px;
     margin: 0 auto;
     border: 3px double gray;
-    padding: 20px;
-    font-size: 1.5rem;
+    padding: 80px 80px 20px 110px;
+    font-size: 1.8rem;
     text-align: justify;
+    color: rgb(133, 105, 78);
+    /* filter: sepia(50); */
 }

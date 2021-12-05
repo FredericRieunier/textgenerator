@@ -10,7 +10,7 @@ var randomRecords = [];
 var i = 0;
 var lastIndex = 0;
 var arrayRange = 0;
-// intégrer un array en paramètre de la fonction
+
 function getRandomIntInclusiveExperiment(min, max, array){
     lastIndex = array.length-1;
     arrayRange = max-min;
@@ -23,7 +23,8 @@ function getRandomIntInclusiveExperiment(min, max, array){
         return getRandomIntInclusiveExperiment(min, max, array);
     }
     else{
-        if(array.length > 5){
+        // Defines after how many phrases a proposition can be picked up again
+        if(array.length > 7){
             array.push(randomNumberPicked);
             array.shift();
             return randomNumberPicked;            
