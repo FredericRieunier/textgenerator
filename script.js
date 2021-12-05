@@ -1,13 +1,46 @@
 // Random index generator
-var randomRecords = [];
 function getRandomIntInclusive(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
     var randomNumberPicked = Math.floor(Math.random() * (max-min +1)) + min;
-    randomRecords.push(randomNumberPicked);
     return randomNumberPicked;
 }
 
+var randomRecords = [];
+var i = 0;
+var lastIndex = 0;
+var arrayRange = 0;
+// intégrer un array en paramètre de la fonction
+function getRandomIntInclusiveExperiment(min, max, array){
+    lastIndex = array.length-1;
+    arrayRange = max-min;
+
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    var randomNumberPicked = Math.floor(Math.random() * (max-min +1)) + min;
+
+    if(array.includes(randomNumberPicked)){
+        return getRandomIntInclusiveExperiment(min, max, array);
+    }
+    else{
+        if(array.length > 5){
+            array.push(randomNumberPicked);
+            array.shift();
+            return randomNumberPicked;            
+        }
+        else{
+            array.push(randomNumberPicked);
+            return randomNumberPicked;
+        }
+    }
+}
+
+// function experimentRandom(){
+//     getRandomIntInclusiveExperiment(0, 10);
+// }
+
+// var randomExpButton = document.getElementById("test-random");
+// randomExpButton.addEventListener("click", experimentRandom);
 
 
 // Load words arrays
@@ -38,29 +71,29 @@ function getWords(t){
     // Add uppercase to sentence first letter
     function strUcFirst(a){return (a+'').charAt(0).toUpperCase()+a.substr(1);}
 
-    function RandomizeIndexAndAddproposition(array){
-        var randomIndex = getRandomIntInclusive(0, array.length -1);
+    function RandomizeIndexAndAddproposition(wordsArray, lastChosen){
+        var randomIndex = getRandomIntInclusiveExperiment(0, wordsArray.length -1, lastChosen);
         if(phrase[phrase.length-1] == "." || phrase == ""){
-            return phrase += ' ' + strUcFirst(array[randomIndex]);
+            return phrase += ' ' + strUcFirst(wordsArray[randomIndex]);
         }
         else{
-            return phrase += ' ' + array[randomIndex];
+            return phrase += ' ' + wordsArray[randomIndex];
         }
     }
 
     var button = document.getElementById('generate');
     button.addEventListener("click", addSentence);
 
+    var lastChosenSubjects = [];
+    var lastChosenTransitiveVerbs = [];
+    var lastChosenCod = [];
     function addSentence(){
-        // console.log(getRandomIntInclusive(1, 10));
-        console.log(randomRecords);
-        // console.log(Math.random());
-        RandomizeIndexAndAddproposition(wordsArrays.sujets);
-        RandomizeIndexAndAddproposition(wordsArrays.verbes_transitifs);
-        RandomizeIndexAndAddproposition(wordsArrays.cOD);
+ 
+        RandomizeIndexAndAddproposition(wordsArrays.sujets, lastChosenSubjects);
+        RandomizeIndexAndAddproposition(wordsArrays.verbes_transitifs, lastChosenTransitiveVerbs);
+        RandomizeIndexAndAddproposition(wordsArrays.cOD, lastChosenCod);
         phrase += ".";
 
-        // console.log(phrase[phrase.length-1]);
         // Display text
         // var paragraphAnimated = document.getElementById("paragraph-animated");
 
@@ -72,12 +105,10 @@ function getWords(t){
         //         paragraphAnimated.innerText += phrase[i];
         //     }
         //     interval = setInterval(addALetter, 2000);
-        //     console.log(phrase.length);
         // }
        
 
         paragraph.innerText = phrase;
-        // console.log(phrase[1]);
     }
 
     // Faire une animation d'apparition des lettres une par une (donner impression que le texte est tapé).
