@@ -13,6 +13,21 @@ h1{
     font-style: italic;
 }
 
+#generate{
+    padding: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2rem;
+    position:fixed;
+    left: 3rem;
+    top: 50vh;
+    bottom: auto;
+}
+
+#generate:hover{
+    cursor: pointer;
+    filter: invert();
+}
+
 main{
     text-align: center;
 }
@@ -20,11 +35,13 @@ main{
 p{
     background-image: url("https://thumbs.dreamstime.com/z/page-vide-d-un-livre-tr%C3%A8s-vieux-464831.jpg");
     width: 650px;
+    min-height: 60vh;
     margin: 0 auto;
     border: 3px double gray;
-    padding: 80px 80px 20px 110px;
+    padding: 130px 100px 20px 110px;
     font-size: 1.8rem;
     text-align: justify;
-    color: rgb(133, 105, 78);
+    /* color: rgba(133, 105, 78, 0.74); */
+    color: rgba(0, 0, 0, 0.459);
     /* filter: sepia(50); */
 }
