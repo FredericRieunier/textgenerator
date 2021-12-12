@@ -34,14 +34,21 @@ main{
 
 p{
     background-image: url("https://thumbs.dreamstime.com/z/page-vide-d-un-livre-tr%C3%A8s-vieux-464831.jpg");
+    background-position-y: -75px;
     width: 650px;
-    min-height: 60vh;
+    min-height: 80vh;
     margin: 0 auto;
     border: 3px double gray;
-    padding: 130px 100px 20px 110px;
+    padding: 40px 100px 20px 110px;
     font-size: 1.8rem;
     text-align: justify;
     /* color: rgba(133, 105, 78, 0.74); */
     color: rgba(0, 0, 0, 0.459);
     /* filter: sepia(50); */
+}
+
+p::first-letter{
+    font-size: 4rem;
+    line-height: 1.8rem;
+    padding-left: 2rem;
 }

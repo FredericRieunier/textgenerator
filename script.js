@@ -88,11 +88,17 @@ function getWords(t){
     var lastChosenSubjects = [];
     var lastChosenTransitiveVerbs = [];
     var lastChosenCod = [];
+    var lastChosenLieu = [];
+    var lastChosenAdverbes = [];
+
     function addSentence(){
  
+        // RandomizeIndexAndAddproposition(wordsArrays.adverbes, lastChosenAdverbes);
+        // phrase += ", ";
         RandomizeIndexAndAddproposition(wordsArrays.sujets, lastChosenSubjects);
         RandomizeIndexAndAddproposition(wordsArrays.verbes_transitifs, lastChosenTransitiveVerbs);
         RandomizeIndexAndAddproposition(wordsArrays.cOD, lastChosenCod);
+        // RandomizeIndexAndAddproposition(wordsArrays.complements_de_lieu, lastChosenLieu);
         phrase += ".";
 
         // Display text

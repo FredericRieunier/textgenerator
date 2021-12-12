@@ -4,18 +4,19 @@
             
             "le petit train",
             "le gros chat roux",
-            "la vache du pré d'à côté",
+            "Louise Blanvillain",
             "la mère du pape",
             "le professeur d'espagnol sexy",
-            "le mec de la tombe d'à côté",
             "la caissière de chez Leclerc",
             "Jean Castex",
             "Alain Finkielkraut",
             "La Castafiore",
-            
+            "un caméléon",
             "Marie-Antoinette",
             "Jean-Michel Jarre",
-            "John Lennon"
+            "John Lennon",
+            "Picasso",
+            "Jean-Pierre Malsain"
         ],
         "verbes_intransitifs": [
             "ronfle",
@@ -39,7 +40,15 @@
             "souille",
             "grogne comme",
             "préoccupe",
-            "vomit sur"
+            "vomit sur",
+            "régale",
+            "enchante",
+            "tape à coups de massue",
+            "fait la tournée des bars avec",
+            "caresse",
+            "nettoie, dans ses moindres recoins,",
+            "joue avec",
+            "s'ennuie sans"
         ],
         "cOD": [
             "un bon gros lardon",
@@ -49,19 +58,53 @@
             "des filles d'allure légère",
             "la bonne du curé",
             "tonton Gérard, ce vieux cochon",
-            "\"Les racines du ciel\"",
             "des morues aux fraises",
             "les testicules de Jésus Christ",
             "les babouches de Cléopâtre",
             "Dieu le père",
             "Judas",
-            "la grosse bille à Dudule"
+            "la grosse bille à Dudule",
+            "un joli glaire de Covid",
+            "des rognures d'ongles",
+            "Colette Renard",
+            "feu Jacques Chirac",
+            "un vieux loup de mer",
+            "Petit Caca Noël",
+            "Mickey",
+            "le bon roi Dagobert",
+            "Babar"
         ],
         "complements_de_lieu": [
             "sur YouPorn",
             "dans sa chambre",
             "au boulot",
-            "dans les nuages"
+            "dans les nuages",
+            "à la piscine",
+            "au milieu des prés",
+            "en pleine foule",
+            "du haut du balcon",
+            "dans le hall du Ritz",
+            "à la cuisine",
+            "sur le canapé",
+            "dans le métro",
+            "au cinéma"
+        ],
+        "adverbes": [
+            "allègrement",
+            "gentiment",
+            "patiemment",
+            "méchamment",
+            "à fond de train",
+            "avec entrain",
+            "délicatement",
+            "fourbement",
+            "sans préambule",
+            "calmement",
+            "avec rigueur",
+            "scrupuleusement",
+            "brutalement",
+            "en rigolant"
         ]
+        
     }
 ]
